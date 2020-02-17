@@ -1,0 +1,12 @@
+<h1>Questions#answer</h1>
+<h2><%= @question %></h2>
+
+<% if @question =~ /I am going to work/i%>
+ <p><%= "Great"%></p>
+<% elsif @question.ends_with?('?') %>
+  <p><%= "Silly question, Go to work!"  %></p>
+<% else %>
+  <p><%= "I do not care. Go to work" %></p>
+<% end %>
+
+<%= link_to "Ask another question", ask_path %>
